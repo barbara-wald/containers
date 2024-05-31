@@ -111,7 +111,6 @@ toc:
       - topicgroup:
           label: Managing access control
           topics:
-          - access-overview.md
           - classic-credentials.md
           - access-iam-rbac.md
           - access-pod-identity.md
@@ -138,6 +137,8 @@ toc:
       - topicgroup:
           label: Controlling network traffic in VPC clusters
           topics:
+          - vpc-security-group2.md
+          - sbd-allow-outbound.md
           - vpc-security-group.md
           - vpc-security-group-manage.md
           - vpc-acls.md
@@ -303,6 +304,12 @@ toc:
           - cs_versions_overview.md
           - benchmarks_overview.md
           - topicgroup:
+              label: Version 1.30
+              topics:
+              - cs_versions_130.md
+              - cs_versions_changelog_130.md
+              - cs_benchmarks_130.md
+          - topicgroup:
               label: Version 1.29
               topics:
               - cs_versions_129.md
@@ -433,6 +440,7 @@ toc:
               - ts-webhook-debug.md
               - ts-cluster-master.md
               - ts-cluster-master-upgrade.md
+              - ts-resource-migration.md
               - states-cluster.md
               - ts-cluster-cli.md
               - ts-cluster-create-delete.md
@@ -455,6 +463,8 @@ toc:
               - ts-kube-dashboord-oom.md
               - ts-admin-cert.md
               - ts-vpc-byok-encrypted-storage.md
+              - ts-sbd-cluster-create-quota.md
+              - ts-sbd-non-sbd-clusters.md
           - topicgroup:
               label: Worker nodes
               topics:
@@ -483,6 +493,8 @@ toc:
               - ts-app-07-svc-name.md
               - ts-app-svc-key.md
               - ts-app-helm-install.md
+              - ts-sbd-app-not-working.md
+              - ts-sbd-nodeport-not-working.md
           - topicgroup:
               label: Cluster autoscaler
               topics:
@@ -508,6 +520,7 @@ toc:
               - ts-calico-log-level.md
               - ts-keepalive-sysctl.md
               - ts-slow-dns-lookup.md
+              - ts-sbd-custom-dns.md
           - topicgroup:
               label: Logging and monitoring
               topics:

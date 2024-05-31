@@ -2,10 +2,10 @@
 
 copyright: 
   years: 2014, 2024
-lastupdated: "2024-05-10"
+lastupdated: "2024-05-29"
 
 
-keywords: kubernetes
+keywords: kubernetes, containers
 
 subcollection: containers
 
@@ -306,7 +306,7 @@ Before you begin: [Log in to your account. If applicable, target the appropriate
 1. Verify the storage classes for {{site.data.keyword.blockstorageshort}} were added to your cluster.
 
     ```sh
-    kubectl get storageclasses | grep block
+    kubectl get sc | grep block
     ```
     {: pre}
 
@@ -429,7 +429,7 @@ To remove the plug-in:
 4. Verify that the block storage classes are removed. The removal of the storage classes is successful if no storage classes are displayed in your CLI output.
 
     ```sh
-    kubectl get storageclasses | grep block
+    kubectl get sc | grep block
     ```
     {: pre}
 
@@ -454,7 +454,7 @@ Make sure to choose your storage configuration carefully to have enough capacity
 1. List available storage classes in {{site.data.keyword.containerlong}}.
 
     ```sh
-    kubectl get storageclasses | grep block
+    kubectl get sc | grep block
     ```
     {: pre}
 
@@ -689,7 +689,7 @@ The following steps explain how to create a custom, encrypted storage class that
 
 1. [Decide on a storage configuration](/docs/containers?topic=containers-block_storage#block_predefined_storageclass).
 
-1. Create a custom storage class that provisions an encrypted block storage instance by using one of the {{site.data.keyword.IBM_notm}}-provided storage classes as the basis. You can retrieve the details a storage class by running `kubectl get storageclass <storageclass_name> -o yaml`. The following example is based on the `ibmc-block-retain-bronze` storage class.
+1. Create a custom storage class that provisions an encrypted block storage instance by using one of the {{site.data.keyword.IBM_notm}}-provided storage classes as the basis. You can retrieve the details a storage class by running `kubectl get sc <storageclass_name> -o yaml`. The following example is based on the `ibmc-block-retain-bronze` storage class.
     ```yaml
     apiVersion: storage.k8s.io/v1
     kind: StorageClass
@@ -1545,7 +1545,7 @@ Complete the following steps to verify that all existing stateful sets in your c
     :   In the spec volume claim templates spec resources requests section, if you want to provision [performance storage](#block_predefined_storageclass), enter the number of IOPS. If you use an endurance storage class and specify a number of IOPS, the number of IOPS is ignored. Instead, the IOPS that is specified in your storage class is used.
     
     `storageClassName`
-    :   In the spec volume claim templates spec section, enter the storage class that you want to use. To list existing storage classes, run `kubectl get storageclasses | grep block`. If you don't specify a storage class, the PVC is created with the default storage class that is set in your cluster. Make sure that the default storage class uses the `ibm.io/ibmc-block` provisioner so that your stateful set is provisioned with block storage.
+    :   In the spec volume claim templates spec section, enter the storage class that you want to use. To list existing storage classes, run `kubectl get sc | grep block`. If you don't specify a storage class, the PVC is created with the default storage class that is set in your cluster. Make sure that the default storage class uses the `ibm.io/ibmc-block` provisioner so that your stateful set is provisioned with block storage.
 
 1. Create your stateful set.
 

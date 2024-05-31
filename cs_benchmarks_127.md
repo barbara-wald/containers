@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2023, 2024
-lastupdated: "2024-01-03"
+lastupdated: "2024-05-29"
 
 
 keywords: kubernetes, containers, benchmarks, 1.27, CIS benchmarks
@@ -17,6 +17,9 @@ subcollection: containers
 
 The Center for Internet Security (CIS) publishes the [CIS Kubernetes Benchmark](https://www.cisecurity.org/benchmark/kubernetes/){: external} as a framework of specific steps to configure Kubernetes more securely and with standards that are commensurate to various industry regulations. This document contains the results of the version 1.5 CIS Kubernetes benchmark for clusters that run Kubernetes version 1.27. For more information or help understanding the benchmark, see [Using the benchmark](/docs/containers?topic=containers-cis-benchmark#cis-benchmark-use).
 {: shortdesc}
+
+Kubernetes version 1.27 is deprecated. Update your cluster to at least [version 1.28](/docs/containers?topic=containers-cs_versions_128) as soon as possible.
+{: deprecated}
 
 
 ## 1 Master node security configuration

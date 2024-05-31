@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2023, 2024
-lastupdated: "2024-05-23"
+lastupdated: "2024-05-30"
 
 
 keywords: kubernetes, containers, change log, 129 change log, 129 updates
@@ -40,6 +40,28 @@ Some change logs are for _worker node fix packs_, and apply only to worker nodes
 
 Review the version 1.29 change log.
 {: shortdesc}
+
+
+### Change log for master fix pack 1.29.5_1540, released 29 May 2024
+{: #1295_1540_M}
+
+The following table shows the changes that are in the master fix pack 1.29.5_1540. Master patch updates are applied automatically. 
+
+
+
+| Component | Previous | Current | Description |
+| --- | --- | --- | --- |
+| Cluster health image | v1.4.9 | v1.4.10 | New version contains updates and security fixes. |
+| {{site.data.keyword.cloud_notm}} Block Storage driver and plug-in | v2.5.8 | v2.5.9 | New version contains updates and security fixes. |
+| {{site.data.keyword.cloud_notm}} Controller Manager | v1.29.4-1 | v1.29.5-1 | New version contains updates and security fixes. |
+| {{site.data.keyword.filestorage_full_notm}} for Classic plug-in and monitor | 442 | 443 | New version contains updates and security fixes. |
+| {{site.data.keyword.cloud_notm}} Metrics Server Config Watcher | v1.1.2 | v1.1.3 | New version contains updates and security fixes. |
+| Key Management Service provider | v2.9.5 | v2.9.6 | New version contains updates and security fixes. |
+| Konnectivity server and agent | v0.29.0 | v0.29.2_105_iks | See the [Konnectivity release notes](https://github.com/kubernetes-sigs/apiserver-network-proxy/releases/tag/v0.29.2){: external}. |
+| Kubernetes | v1.29.4 | v1.29.5 | See the [Kubernetes release notes](https://github.com/kubernetes/kubernetes/releases/tag/v1.29.5){: external}. |
+| Load balancer and load balancer monitor for {{site.data.keyword.cloud_notm}} Provider | 2867 | 2933 | New version contains updates and security fixes. |
+| Portieris admission controller | v0.13.13 | v0.13.15 | See the [Portieris admission controller release notes](https://github.com/{{site.data.keyword.IBM_notm}}/portieris/releases/tag/v0.13.15){: external}. |
+{: caption="Changes since version 1.29.4_1535" caption-side="bottom"}
 
 
 ### Change log for worker node fix pack 1.29.4_1538, released 23 May 2024

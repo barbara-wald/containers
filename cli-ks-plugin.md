@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2024
-lastupdated: "2024-05-20"
+lastupdated: "2024-05-29"
 
 
 keywords: containers, cli reference, kubernetes cli, openshift cli, {{product_name_notm}}
@@ -760,7 +760,7 @@ ibmcloud ks cluster config --cluster CLUSTER [--admin] [--endpoint ENDPOINT_TYPE
 
 Minimum required permissions
 :   **Viewer** or **Reader** {{site.data.keyword.cloud_notm}} IAM service access role for the cluster in {{site.data.keyword.containerlong_notm}}. Further, if you have only a platform access role or only a service access role, additional constraints apply.
-* **Platform**: If you have only a platform access role, you can perform this command, but you need a [service access role](/docs/containers?topic=containers-iam-platform-access-roles) or a [custom RBAC policy](/docs/containers?topic=containers-access-overview#role-binding) to perform Kubernetes actions in the cluster.
+* **Platform**: If you have only a platform access role, you can perform this command, but you need a [service access role](/docs/containers?topic=containers-iam-platform-access-roles) to perform Kubernetes actions in the cluster.
 * **Service**: If you have the `service` access role, you can perform this command. However, your cluster admin must gather the cluster details for you by either running the `ibmcloud ks cluster ls` command or using the {{site.data.keyword.containerlong_notm}} console. After you receive the cluster name and ID, you can [launch the Kubernetes dashboard from the CLI](/docs/containers?topic=containers-deploy_app#db_cli) and work with Kubernetes.
 
 **Command options**:

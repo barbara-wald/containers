@@ -2,10 +2,10 @@
 
 copyright: 
   years: 2022, 2024
-lastupdated: "2024-01-03"
+lastupdated: "2024-05-29"
 
 
-keywords: kubernetes
+keywords: kubernetes, containers
 
 subcollection: containers
 
@@ -81,7 +81,7 @@ If you want to use {{site.data.keyword.filestorage_vpc_short}} with static provi
 1. Verify that your storage class is available in the cluster.
 
     ```sh
-    kubectl get storageclasses
+    kubectl get sc
     ```
     {: pre}
 

@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2024
-lastupdated: "2024-05-23"
+lastupdated: "2024-05-30"
 
 
 keywords: containers, {{site.data.keyword.containerlong_notm}}, kubernetes, release notes
@@ -27,6 +27,64 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 
 ## May 2024
 {: #containers-may24}
+
+
+
+
+
+### 30 May 2024
+{: #containers-may3024}
+{: release-note}
+
+Ingress ALB updates are available for {{site.data.keyword.containerlong_notm}}.
+:   For more information, see the [change log](/docs/containers?topic=containers-cs_versions_ingress).
+
+
+
+### 29 May 2024
+{: #containers-may2924}
+{: release-note}
+
+
+
+New! {{site.data.keyword.containerlong_notm}} version 1.30.
+:   You can now create or [update clusters to Kubernetes version 1.30](/docs/containers?topic=containers-cs_versions_130). With Kubernetes 1.30, you get the latest stable enhancements from the Kubernetes community as well as enhancements to the {{site.data.keyword.cloud_notm}} product.
+
+{{site.data.keyword.containerlong_notm}} version version 1.30 Kubernetes certification
+:   {{site.data.keyword.containerlong_notm}} version [1.30](/docs/containers?topic=containers-cs_versions_130) is now Kubernetes certified.
+
+Important networking changes for {{site.data.keyword.containerlong_notm}} VPC clusters created at version 1.30.
+:   For more information, see the [130 version information](/docs/openshift?topic=openshift-cs_versions_130) and [Understanding Secure by Default Cluster VPC Networking](/docs/containers?topic=containers-vpc-security-group-reference).
+
+Important changes to the default cluster provisioning behavior for new VPC clusters beginning with version 1.30.
+:   Beginning with version 1.30, there is a new option available at cluster creation time via the UI, CLI, API, and Terraform. This new option manages outbound traffic protection for the cluster. The default behavior is to have outbound traffic protection enabled, which means new version 1.30 VPC clusters won't have access the public internet by default. If your cluster needs access to the public internet, you must specifically include the option (from the UI, CLI, API, and Terraform) to disable outbound traffic protection. Note that you can also disable outbound traffic protection after your cluster is created. You can also selectively allow outbound traffic as needed after your cluster is created. If you provision clusters via automation, make sure to adjust your automation accordingly.
+:   For more information, see the [1.30 version information](/docs/openshift?topic=openshift-cs_versions_130), [Understanding Secure by Default Cluster VPC Networking](/docs/containers?topic=containers-vpc-security-group-reference), and [Managing outbound traffic protection in VPC clusters](/docs/containers?topic=containers-sbd-allow-outbound).
+
+Managing outbound traffic protection in new version 1.30 VPC clusters.
+:   With the introduction of Secure by Default Cluster VPC networking in version 1.30 and later clusters, there are several scenarios where you might need to adjust the security group settings for your clusters to allow outbound traffic to certain resources. For more information, see [Managing outbound traffic protection in VPC clusters](/docs/containers?topic=containers-sbd-allow-outbound).
+
+{{site.data.keyword.containerlong_notm}} version 1.27 is deprecated.
+:   Support for 1.27 ends on {{site.data.keyword.kubernetes_127_unsupported_date}}. Update your cluster to at least [version 1.28](/docs/containers?topic=containers-cs_versions_128) as soon as possible.
+
+
+
+
+
+
+
+
+{{site.data.keyword.containerlong_notm}} master fix packs.
+:   Master fix pack are applied automatically over the course of several days. You can choose to use the [`ibmcloud ks cluster master update`](/docs/containers?topic=containers-kubernetes-service-cli#cs_cluster_update) command yourself without waiting for the update automation to apply the patch. Worker node fix packs can be applied by updating or reloading the worker node in classic infrastructure, or replacing the worker node in VPC infrastructure. Review the following change logs for your cluster version.
+:   [1.29](/docs/containers?topic=containers-changelog_129)
+:   [1.28](/docs/containers?topic=containers-changelog_128)
+:   [1.27](/docs/containers?topic=containers-changelog_127)
+
+
+
+
+
+
+
 
 ### 23 May 2024
 {: #containers-may2324}
@@ -148,6 +206,7 @@ Ingress ConfigMap update
 ### 24 April 2024
 {: #containers-apr2424}
 {: release-note}
+
 
 
 

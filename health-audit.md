@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2024
-lastupdated: "2024-05-07"
+lastupdated: "2024-05-29"
 
 
 keywords: kubernetes, logmet, logs, metrics, audit, events
@@ -40,7 +40,10 @@ Before you set up a Kubernetes API audit configuration, review the following inf
 
 
 
-Audit logs use the `kube-audit` policy in the [`kube-samples` repo](https://github.com/IBM-Cloud/kube-samples/blob/master/kube-audit/kube-audit-policy.yaml){: external}.
+Audit logs use the following policies in the `IBM-Cloud/kube-samples` [GitHub repo](https://github.com/IBM-Cloud/kube-samples){: external}.
+
+- [`default` policy](https://github.com/IBM-Cloud/kube-samples/blob/master/kube-audit/kube-audit-policy.yaml){: external}.
+- [`verbose` policy](https://github.com/IBM-Cloud/kube-samples/blob/master/kube-audit/kube-audit-policy-verbose.yaml){: external}.
 
 
 

@@ -2,10 +2,10 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-01-18"
+lastupdated: "2024-05-29"
 
 
-keywords: kubernetes
+keywords: kubernetes, containers
 
 subcollection: containers
 

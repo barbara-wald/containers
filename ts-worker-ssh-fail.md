@@ -2,10 +2,11 @@
 
 copyright: 
   years: 2014, 2024
-lastupdated: "2024-04-02"
+lastupdated: "2024-05-29"
 
 
-keywords: kubernetes, help, network, connectivity
+keywords: kubernetes,containers
+, help, network, connectivity
 
 subcollection: containers
 
@@ -126,10 +127,7 @@ If you are unable to use the `kubectl debug node` command, you can create an Alp
     ```
     {: pre}
     
-    
-    
     You can use the **`kubectl cp`** command to get logs or other files from a worker node. The following example gets the `/var/log/syslog` file.
-    
     ```sh
     kubectl cp --retries 20 default/debug-${NODE}:/host/var/log/syslog ./syslog
     ```
@@ -143,8 +141,6 @@ If you are unable to use the `kubectl debug node` command, you can create an Alp
     /var/log/kern.log
     ```
     {: screen}
-
-    
     
     
 
@@ -192,7 +188,7 @@ Allowing root SSH access is a security risk. Only allow SSH access when it is re
     ```
     {: pre}
 
-3. Create the following YAML file for a debug pod, and save the file as `enable-ssh.yaml`. Replace `<NODE_NAME>` with the worker node name and replace the example `value` for `SSH_PUBLIC_KEY` with your public SSH key. The Docker alpine image here is used as an example. If the worker node doesn't have public network access, you can maintain a copy of the image for debugging in your own ICR repository or build a customized image with other tools to fit your needs.
+3. Create the following YAML file for a debug pod, and save the file as `enable-ssh.yaml`. Replace `<NODE_NAME>` with the worker node name and replace the example `value` for `SSH_PUBLIC_KEY` with your public SSH key. The Docker alpine image here is used as an example. If the worker node doesn't have public network access, you can keep a copy of the image for debugging in your own ICR repository or build a customized image with other tools to fit your needs.
 
     ```yaml
     apiVersion: v1
@@ -274,6 +270,7 @@ For classic clusters, the [device](https://cloud.ibm.com/gen1/infrastructure/dev
     ssh -i ~/.ssh/id_rsa_worker_private root@<WORKER_PRIVATE_IP>
     ```
     {: pre}
+
 
 ### SSH into the worker node on the public network
 {: #public-network-only-classic-debug}

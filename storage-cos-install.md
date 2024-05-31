@@ -2,10 +2,10 @@
 
 copyright:
   years: 2014, 2024
-lastupdated: "2024-04-15"
+lastupdated: "2024-05-29"
 
 
-keywords: kubernetes
+keywords: kubernetes, containers
 
 subcollection: containers
 
@@ -371,7 +371,7 @@ To remove the `ibmc` Helm plug-in and the `ibm-object-storage-plugin`:
 4. Verify that the storage classes are removed.
 
     ```sh
-    kubectl get storageclasses | grep s3
+    kubectl get sc | grep s3
     ```
     {: pre}
 
@@ -407,7 +407,7 @@ To remove the `ibmc` Helm plug-in and the `ibm-object-storage-plugin`:
 1. List available storage classes in {{site.data.keyword.containerlong_notm}}.
 
     ```sh
-    kubectl get storageclasses | grep s3
+    kubectl get sc | grep s3
     ```
     {: pre}
 
@@ -539,7 +539,7 @@ Review the pod details to verify that the plug-in installation succeeded.
 1. Verify that the storage classes are created successfully.
 
     ```sh
-    kubectl get storageclass | grep s3
+    kubectl get sc | grep s3
     ```
     {: pre}
 

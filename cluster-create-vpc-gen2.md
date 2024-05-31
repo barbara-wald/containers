@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2024
-lastupdated: "2024-05-20"
+lastupdated: "2024-05-29"
 
 
 keywords: containers, {{site.data.keyword.containerlong_notm}}, kubernetes, clusters, worker nodes, worker pools, vpc-gen2
@@ -216,7 +216,7 @@ Observability integrations
     When the provisioning of your Kubernetes master is completed, the state of your cluster changes to **normal**. After the Kubernetes master is ready, your worker nodes are set up.
     ```sh
     NAME         ID                                   State      Created          Workers    Zone      Version     Resource Group Name   Provider
-    mycluster    aaf97a8843a29941b49a598f516da72101   normal   20170201162433   3          Dallas     1.29.4_1526      Default               vpc-gen2
+    mycluster    aaf97a8843a29941b49a598f516da72101   normal   20170201162433   3          Dallas     1.29.5_1526      Default               vpc-gen2
     ```
     {: screen}
 
@@ -229,7 +229,7 @@ Observability integrations
     When the worker nodes are ready, the worker node **State** changes to `normal` and the **Status** changes to `Ready`. When the node **Status** changes to `Ready`, you can access the cluster. Note that even if the cluster is ready, some parts of the cluster that are used by other services, such as Ingress secrets or registry image pull secrets, might still be in process.
     ```sh
     ID                                                     Public IP        Private IP     Flavor              State    Status   Zone    Version
-    kube-blrs3b1d0p0p2f7haq0g-mycluster-default-000001f7   169.xx.xxx.xxx  10.xxx.xx.xxx   b3c.4x16.encrypted  normal   Ready    dal10   1.29.4_1526
+    kube-blrs3b1d0p0p2f7haq0g-mycluster-default-000001f7   169.xx.xxx.xxx  10.xxx.xx.xxx   b3c.4x16.encrypted  normal   Ready    dal10   1.29.5_1526
     ```
     {: screen}
 

@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2022, 2024
-lastupdated: "2024-01-03"
+lastupdated: "2024-05-29"
 
 
 keywords: kubernetes, containers, 1.24 update actions
@@ -71,7 +71,7 @@ The following table shows the actions that you must take before you update the K
 | Type | Description|
 | --- | --- |
 | IBM Cloud Block Storage driver and plug-in installation | The IBM Cloud Block Storage driver and plug-in component is now installed on clusters running classic infrastructure. If you installed the IBM Cloud Block Storage driver and plug-in via the Helm chart, you must uninstall the Helm chart before continuing the master update. Note that your existing persistent volume claims (PVCs) will continue to work after the Helm chart is uninstalled, but you are not able to provision new PVCs until the master update is completed. To uninstall the Helm chart, see [Removing the Block Storage Helm chart](#124-rm-block-helm). |
-| Updated default container network sysctls | New containers running on the pod network will have the following `sysctl` tuning applied by default: `net.ipv4.tcp_keepalive_intvl=15`, `net.ipv4.tcp_keepalive_probes=6` and `net.ipv4.tcp_keepalive_time=40`. If your apps rely on the previous defaults, you will need to update your app deployment to customize the `sysctl` settings. See [Optimizing network keepalive sysctl settings](/docs/containers?topic=containers-kernel#keepalive-iks) for details. |
+| Updated default container network sysctls | New containers running on the pod network will have the following `sysctl` tuning applied by default: `net.ipv4.tcp_keepalive_intvl=15`, `net.ipv4.tcp_keepalive_probes=6` and `net.ipv4.tcp_keepalive_time=40`. If your apps rely on the previous defaults, you must update your app deployment to customize the `sysctl` settings. See [Optimizing network keepalive sysctl settings](/docs/containers?topic=containers-kernel#keepalive-iks) for details. |
 {: caption="Changes to make after you update the master to Kubernetes 1.24" caption-side="bottom"}
 
 #### Removing the Block Storage Helm chart

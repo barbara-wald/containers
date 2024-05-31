@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2024
-lastupdated: "2024-04-19"
+lastupdated: "2024-05-31"
 
 
 keywords: kubernetes, versions, update, upgrade
@@ -28,9 +28,6 @@ For more information about the Kubernetes project versions, see the [Kubernetes 
 
 {{site.data.keyword.containerlong_notm}} concurrently supports multiple versions of Kubernetes. When a latest version (`n`) is released, versions up to 2 behind (`n-2`) are supported. Versions more than 2 behind the latest (`n-3`) are first deprecated and then unsupported. To continue receiving important security patch updates, make sure that your clusters always run a supported Kubernetes version. Deprecated clusters might not receive security updates. For more information, see [Release lifecycle](#release_lifecycle).
 
-
-Review the supported versions of {{site.data.keyword.containerlong_notm}}. In the CLI, you can run `ibmcloud ks versions`.
-
 Dates that are marked with a dagger (`†`) are tentative and subject to change. Operating systems that are marked with an asterisk (`*`) are deprecated; [migrate any worker nodes](/docs/containers?topic=containers-ubuntu-migrate) that use a deprecated operating system to run on a newer operating system version. 
 {: note}
 
@@ -39,9 +36,14 @@ Dates that are marked with a dagger (`†`) are tentative and subject to change.
 
 
 
+[Latest]{: tag-green} 1.30
+- Release date: 29 May 2024
+- End of support: 13 August 2025†
+- Operating systems: `UBUNTU_20_64`
+- [Version information and update actions](/docs/containers?topic=containers-cs_versions_130)
+- [Change log](/docs/containers?topic=containers-changelog_130)
 
-
-[Latest]{: tag-green} [Default]{: tag-purple} 1.29
+[Default]{: tag-purple} 1.29
 - Release date: 14 February 2024
 - End of support: 23 April 2025
 - Operating systems: `UBUNTU_20_64`
@@ -57,7 +59,7 @@ Dates that are marked with a dagger (`†`) are tentative and subject to change.
 
 1.27
 - Release date: 24 May 2023
-- End of support: 14 August 2024†
+- End of support: 18 September 2024†
 - Operating systems: `UBUNTU_20_64`
 - [Version information and update actions](/docs/containers?topic=containers-cs_versions_127)
 - [Change log](/docs/containers?topic=containers-changelog_127)

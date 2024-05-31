@@ -2,10 +2,10 @@
 
 copyright: 
   years: 2023, 2024
-lastupdated: "2024-01-03"
+lastupdated: "2024-05-29"
 
 
-keywords: kubernetes, pod security, reset, valid configuration, psa
+keywords: kubernetes, containers, pod security, reset, valid configuration, psa
 
 subcollection: containers
 

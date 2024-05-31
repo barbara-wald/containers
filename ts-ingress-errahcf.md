@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-03-04"
+lastupdated: "2024-05-29"
 
 
 keywords: containers, ingress, troubleshoot ingress, errahcf
@@ -67,7 +67,7 @@ Review your access control lists to make sure that health traffic is allowed.
 1. Ensure that no firewall rules or access control lists are blocking communication between the health checker application and your ALBs.
     - **VPC clusters**:
         - Health check traffic originates from one of the worker nodes of your cluster. In the case of public ALBs, the traffic is directed to the public floating IP address of the VPC Load Balancer instance, therefore it is required to have a Public Gateway attached to all the worker subnets. In the case of private ALBs, the traffic is directed to the VPC subnet IP address of the VPC Load Balancer, therefore a Public Gateway is not required.
-        - If your VPC Load Balancers are located on a subnet other than the worker nodes of your cluster, you will need to update the Security Group attached to the VPC Load Balancer subnet to allow incoming traffic from the worker subnets.
+        - If your VPC Load Balancers are located on a subnet other than the worker nodes of your cluster, you must update the Security Group attached to the VPC Load Balancer subnet to allow incoming traffic from the worker subnets.
         - For more information, see [Controlling traffic with VPC security groups](/docs/containers?topic=containers-vpc-security-group).
     - **Classic clusters**:
         - Make sure you enabled [Virtual Router Forwarding (VRF)](/docs/account?topic=account-vrf-service-endpoint&interface=ui) in your account. Health check traffic does not leave the cluster but might be sent from one node to another. Ensure your network policies do not block this traffic.

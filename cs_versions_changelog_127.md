@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2023, 2024
-lastupdated: "2024-05-23"
+lastupdated: "2024-05-30"
 
 
 keywords: kubernetes, containers, change log, 127 change log, 127 updates
@@ -17,6 +17,9 @@ subcollection: containers
 
 View information about version changes for major, minor, and patch updates that are available for your {{site.data.keyword.containerlong}} clusters that run version 1.27. Changes include updates to Kubernetes and {{site.data.keyword.cloud_notm}} Provider components.
 {: shortdesc}
+
+Kubernetes version 1.27 is deprecated. Update your cluster to at least [version 1.28](/docs/containers?topic=containers-cs_versions_128) as soon as possible.
+{: deprecated}
 
 ## Overview
 {: #changelog_overview_127}
@@ -43,6 +46,31 @@ Review the version 1.27 change log.
 
 
 
+
+
+### Change log for master fix pack 1.27.14_1577, released 29 May 2024
+{: #12714_1577_M}
+
+The following table shows the changes that are in the master fix pack 1.27.14_1577. Master patch updates are applied automatically. 
+
+
+
+| Component | Previous | Current | Description |
+| --- | --- | --- | --- |
+| Calico | v3.26.4 | v3.27.2 | See the [Calico release notes](https://docs.tigera.io/calico/3.27/release-notes/#v3.27.2){: external}. |
+| Cluster health image | v1.4.9 | v1.4.10 | New version contains updates and security fixes. |
+| GPU device plug-in and installer | 206b5a6 | 9fad43c | New version contains updates and security fixes. |
+| {{site.data.keyword.IBM_notm}} Calico extension | 1537 | 1589 | New version contains security fixes. |
+| {{site.data.keyword.cloud_notm}} Block Storage driver and plug-in | v2.4.19 | v2.4.20 | New version contains updates and security fixes. |
+| {{site.data.keyword.cloud_notm}} Controller Manager | v1.27.12-10 | v1.27.14-1 | New version contains updates and security fixes. |
+| {{site.data.keyword.filestorage_full_notm}} for Classic plug-in and monitor | 442 | 443 | New version contains updates and security fixes. |
+| {{site.data.keyword.cloud_notm}} Metrics Server Config Watcher | 50808cc | 0281c94 | New version contains updates and security fixes. |
+| Key Management Service provider | v2.8.9 | v2.8.10 | New version contains updates and security fixes. |
+| Konnectivity agent and server | v0.1.5_47_iks | v0.1.9_105_iks | See the [Konnectivity release notes](https://github.com/kubernetes-sigs/apiserver-network-proxy/releases/tag/v0.1.9){: external}. |
+| Kubernetes | v1.27.13 | v1.27.14 | See the [Kubernetes release notes](https://github.com/kubernetes/kubernetes/releases/tag/v1.27.14){: external}. |
+| Load balancer and load balancer monitor for {{site.data.keyword.cloud_notm}} Provider | 2867 | 2933 | New version contains updates and security fixes. |
+| Portieris admission controller | v0.13.13 | v0.13.15 | See the [Portieris admission controller release notes](https://github.com/{{site.data.keyword.IBM_notm}}/portieris/releases/tag/v0.13.15){: external}. |
+{: caption="Changes since version 1.27.13_1572" caption-side="bottom"}
 
 
 ### Change log for worker node fix pack 1.27.13_1575, released 23 May 2024

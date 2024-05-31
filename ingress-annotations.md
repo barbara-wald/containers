@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2024-05-20"
+lastupdated: "2024-05-29"
 
 keywords: kubernetes, nginx, ingress controller
 
@@ -593,7 +593,7 @@ Enforce authentication for your apps by configuring Ingress with [{{site.data.ke
 
 2. Add redirect URLs for your app. A redirect URL is the callback endpoint of your app. To prevent phishing attacks, {{site.data.keyword.appid_full_notm}} validates the request URL against the allowlist of redirect URLs.
     1. In the {{site.data.keyword.appid_short_notm}} management console, navigate to **Manage Authentication**.
-    2. In the **Identity providers** tab, make sure that you have an Identity Provider selected. If no Identity Provider is selected, the user will not be authenticated but will be issued an access token for anonymous access to the app.
+    2. In the **Identity providers** tab, make sure that you have an Identity Provider selected. If no Identity Provider is selected, the user will not be authenticated but is issued an access token for anonymous access to the app.
     3. In the **Authentication settings** tab, add redirect URLs for your app in the format `https://<hostname>/oauth2-<App_ID_service_instance_name>/callback`. Note that all letters in the service instance name must specified as lowercase.
 
     If you use the [{{site.data.keyword.appid_full_notm}} logout function](/docs/appid?topic=appid-cd-sso#cd-sso-log-out), you must append `/sign_out` to your domain in the format `https://<hostname>/oauth2-<App_ID_service_instance_name>/sign_out` and include this URL in the redirect URLs list. If you want to use a custom logout page, you must set `whitelist_domains` in the ConfigMap for OAuth2-Proxy. Call the `https://<hostname>/oauth2-<App_ID_service_instance_name>/sign_out` endpoint with the `rd` query parameter or set the `X-Auth-Request-Redirect` header with your custom logout page. For more details, see [Sign out](https://oauth2-proxy.github.io/oauth2-proxy/features/endpoints/#sign-out){: external}.

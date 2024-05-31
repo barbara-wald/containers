@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2024
-lastupdated: "2024-04-24"
+lastupdated: "2024-05-29"
 
 
 keywords: containers, {{site.data.keyword.containerlong_notm}}
@@ -99,6 +99,9 @@ TLS cipher support
 
 Review the default settings for the `kube-controller-manager` master component in {{site.data.keyword.containerlong_notm}}. 
 {: shortdesc}
+
+Node monitor grace period
+:   `node-monitor-grace-period=50s` (Kubernetes version 1.30 and later)
 
 Feature gates
 :   See [Feature gates](#feature-gates)
@@ -282,6 +285,9 @@ Review the feature gates that are applied to all master and worker node componen
 
 In cluster version 1.26 and later, you can use the **`kubectl get --raw /metrics | grep kubernetes_feature_enabled`** command to determine if a feature gate is enabled or disabled.
 {: tip}
+
+1.30
+:   `CustomCPUCFSQuotaPeriod=true`
 
 1.29
 :   `CustomCPUCFSQuotaPeriod=true`

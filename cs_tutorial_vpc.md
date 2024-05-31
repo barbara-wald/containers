@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2024
-lastupdated: "2024-03-15"
+lastupdated: "2024-05-29"
 
 
 keywords: kubernetes
@@ -47,7 +47,7 @@ In the tutorial lessons, you create an {{site.data.keyword.containerlong_notm}} 
 ## What you'll get
 {: #vpc_rh_get}
 
-In this tutorial, you will create the following resources. There are optional steps to delete these resources if you do not want to keep them after completing the tutorial. 
+In this tutorial, you create the following resources. There are optional steps to delete these resources if you do not want to keep them after completing the tutorial. 
 
 - A VPC cluster
 - A simple Hello World app deployed to your cluster
