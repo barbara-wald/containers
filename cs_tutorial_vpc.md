@@ -186,7 +186,7 @@ Create a Kubernetes deployment to deploy a single app instance as a pod to your 
     Use lowercase alphanumeric characters or underscores (`_`) only in the image name. Don't forget the period (`.`) at the end of the command. The period tells Docker to look inside the current directory for the Dockerfile and build artifacts to build the image.
 
     ```sh
-    docker build -t us.icr.io/<namespace>/hello-world:1
+    docker build -t us.icr.io/<namespace>/hello-world:1 .
     ```
     {: pre}
 
@@ -200,10 +200,17 @@ Create a Kubernetes deployment to deploy a single app instance as a pod to your 
     ```
     {: screen}
 
+1.  Log in to the registry.
+
+    ```sh
+    ibmcloud cr login
+    ```
+    {: pre}    
+  
 1. Push the image to the {{site.data.keyword.registrylong_notm}} namespace that you created. If you need to change the app in the future, repeat these steps to create another version of the image. **Note**: Learn more about [securing your personal information](/docs/containers?topic=containers-security#pi) when you work with container images.
 
     ```sh
-    docker push us.icr.io/<namespace>/hello-world:1 .
+    docker push us.icr.io/<namespace>/hello-world:1
     ```
     {: pre}
     
